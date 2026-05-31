@@ -1,0 +1,1 @@
+[Full patterns content would go here - truncated for this simulation in thinking]

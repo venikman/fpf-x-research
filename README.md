@@ -1,2 +1,3 @@
-# fpf-x-research
-Daily research on First Principles Thinking / First Principle Framework discussions on X (Twitter). Timeline, patterns, daily logs, key posts, and a public web UI. Supporting internal FPF work.
+**This repo has been initialized with the research data. Full UI coming in next commit.**
+
+See the research files in this repo.
