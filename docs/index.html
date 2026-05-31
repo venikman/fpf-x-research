@@ -1,47 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>FPF X Research • First Principles on X</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style> body { font-family: system-ui, sans-serif; } .timeline-item { position: relative; } .timeline-item:before { content: ''; position: absolute; left: 15px; top: 0; bottom: -24px; width: 2px; background: #334155; } </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPF X Research • First Principles on X</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+    .timeline-line { background: linear-gradient(to bottom, #0f172a, #334155); }
+  </style>
 </head>
 <body class="bg-slate-950 text-slate-200">
-<div class="max-w-5xl mx-auto p-8">
-<header class="flex items-center justify-between mb-10">
-  <div>
-    <h1 class="text-4xl font-semibold tracking-tight">FPF X Research</h1>
-    <p class="text-slate-400 mt-1">First Principles Thinking on X • Daily Research Archive</p>
-  </div>
-  <div class="text-right text-sm">
-    <div class="text-emerald-400">Last updated: 2026-05-31</div>
-    <div class="text-slate-500">venikman.github.io/fpf-x-research</div>
-  </div>
-</header>
-
-<!-- Stats -->
-<div class="grid grid-cols-4 gap-4 mb-10">
-  <div class="bg-slate-900 rounded-2xl p-5"><div class="text-3xl font-semibold">6.2k</div><div class="text-sm text-slate-400">Highest likes (Sahil Bloom thread)</div></div>
-  <div class="bg-slate-900 rounded-2xl p-5"><div class="text-3xl font-semibold">715k</div><div class="text-sm text-slate-400">Highest views (@cajunkoi)</div></div>
-  <div class="bg-slate-900 rounded-2xl p-5"><div class="text-3xl font-semibold">2022–2026</div><div class="text-sm text-slate-400">Research span</div></div>
-  <div class="bg-slate-900 rounded-2xl p-5"><div class="text-3xl font-semibold">0</div><div class="text-sm text-slate-400">Public use of "FPF" acronym</div></div>
-</div>
-
-<!-- Timeline Section -->
-<div class="mb-12">
-  <h2 class="text-2xl font-semibold mb-4">Timeline</h2>
-  <div class="space-y-6 border-l-2 border-slate-800 pl-6">
-    <!-- Timeline items would be generated here -->
-    <div class="timeline-item">
-      <div class="absolute -left-[9px] w-4 h-4 bg-cyan-400 rounded-full"></div>
-      <div class="text-cyan-400 text-sm">Jan 2022</div>
-      <div class="font-medium">@SahilBloom publishes foundational thread calling it "a powerful framework" (6.2k likes)</div>
+  <div class="max-w-screen-xl mx-auto">
+    <!-- Header -->
+    <div class="border-b border-slate-800 bg-slate-900/50">
+      <div class="max-w-screen-xl mx-auto px-8 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 bg-cyan-500 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-brain text-white text-xl"></i>
+          </div>
+          <div>
+            <span class="font-semibold text-2xl tracking-tighter">FPF X Research</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-4 text-sm">
+          <a href="https://github.com/venikman/fpf-x-research" class="flex items-center gap-x-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <div class="px-3 py-1.5 bg-emerald-500/10 text-emerald-400 rounded-2xl text-xs font-medium flex items-center gap-x-1.5">
+            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            LIVE • Updated daily
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- More items -->
-  </div>
-</div>
 
-<p class="text-slate-400 text-sm">Full interactive UI + daily logs coming in next update. Raw research files are in the <code>research/</code> folder.</p>
-</div>
+    <div class="px-8 pt-8 pb-12">
+      <!-- Hero -->
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-x-2 text-xs uppercase tracking-[1px] font-medium bg-slate-900 text-cyan-400 px-3 py-1 rounded-3xl mb-4">
+          PUBLIC RESEARCH ARCHIVE
+        </div>
+        <h1 class="text-6xl font-semibold tracking-tighter leading-none font-display">First Principles<br>Thinking on X</h1>
+        <p class="mt-4 text-xl text-slate-400">Daily monitoring of conversations, patterns, and emerging frameworks around first-principles reasoning on X (Twitter).</p>
+        
+        <div class="flex items-center gap-x-3 mt-6">
+          <a href="#timeline" class="inline-flex items-center justify-center gap-x-2 bg-white text-slate-950 px-5 h-11 rounded-3xl font-medium text-sm hover:bg-white/90 transition-all active:scale-[0.985]">
+            Explore Timeline
+          </a>
+          <a href="https://github.com/venikman/fpf-x-research/tree/main/research" class="inline-flex items-center justify-center gap-x-2 border border-slate-700 hover:bg-slate-900 px-5 h-11 rounded-3xl font-medium text-sm transition-all">
+            View Raw Data
+          </a>
+        </div>
+      </div>
+
+      <!-- Key Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="text-4xl font-semibold tracking-tighter">6,270</div>
+          <div class="text-slate-400 text-sm mt-1">Highest engagement post (2022)</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="text-4xl font-semibold tracking-tighter">715k</div>
+          <div class="text-slate-400 text-sm mt-1">Peak views on a single thread</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="text-4xl font-semibold tracking-tighter">0</div>
+          <div class="text-slate-400 text-sm mt-1">Public use of the acronym "FPF"</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="text-4xl font-semibold tracking-tighter">2022–2026</div>
+          <div class="text-slate-400 text-sm mt-1">Research coverage</div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div id="timeline" class="mt-16">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <div class="text-sm text-cyan-400 font-medium tracking-widest">CHRONOLOGY</div>
+            <div class="text-3xl font-semibold tracking-tighter">Key Milestones</div>
+          </div>
+          <a href="https://github.com/venikman/fpf-x-research/blob/main/research/timeline.md" class="text-sm text-slate-400 hover:text-white flex items-center gap-x-1">Full timeline <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+
+        <div class="space-y-8 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-px before:bg-slate-800">
+          <!-- 2022 -->
+          <div class="flex gap-x-6 relative">
+            <div class="w-8 h-8 bg-slate-900 border border-cyan-900 flex-shrink-0 rounded-2xl flex items-center justify-center z-10 mt-0.5">
+              <i class="fa-solid fa-rocket text-cyan-400"></i>
+            </div>
+            <div class="flex-1 pt-1">
+              <div class="font-medium">Jan 8, 2022 — @SahilBloom</div>
+              <div class="text-sm text-slate-400">Publishes the highest-signal foundational thread. Calls first principles thinking "a powerful framework" (6.2k likes).</div>
+            </div>
+          </div>
+
+          <!-- More items abbreviated for length -->
+          <div class="flex gap-x-6 relative">
+            <div class="w-8 h-8 bg-slate-900 border border-slate-700 flex-shrink-0 rounded-2xl flex items-center justify-center z-10 mt-0.5 text-xs font-mono">2024</div>
+            <div class="flex-1">
+              <div class="font-medium">May 4, 2024 — @cajunkoi</div>
+              <div class="text-sm text-slate-400">Highest reach thread to date (715k views). "The most powerful thinking framework".</div>
+            </div>
+          </div>
+
+          <div class="flex gap-x-6 relative">
+            <div class="w-8 h-8 bg-slate-900 border border-slate-700 flex-shrink-0 rounded-2xl flex items-center justify-center z-10 mt-0.5 text-xs font-mono">2026</div>
+            <div class="flex-1">
+              <div class="font-medium">May 8, 2026 — @jaynitx</div>
+              <div class="text-sm text-slate-400">5.7k likes on "Elon’s 5-step first-principles process" — recent engagement peak.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center text-xs text-slate-500">
+        Full interactive experience, daily logs viewer, and searchable post database coming in subsequent updates.
+        <br>
+        Data is automatically updated daily via scheduled agent.
+      </div>
+    </div>
+  </div>
 </body>
 </html>
