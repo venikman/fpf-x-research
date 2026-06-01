@@ -1,30 +1,23 @@
-## Improved Search Methodology (Recommended)
+## Search Parameter Analysis (Real Test Run - June 2026)
 
-### Core Philosophy
-High recall + strict manual verification works best for FPF because the acronym is extremely noisy.
+I ran all the recommended improved queries over the summer 2025+ window. Here's what actually worked:
 
-### Recommended Daily / High-Frequency Searches
+### Best Performing Queries (by far)
 
-**Highest precision (run these daily):**
-- `url:"ailev/FPF" since:2025-06-01`
-- `from:ailev (FPF OR "First Principles") since:2025-06-01`
-- `FPF (CharacteristicSpace OR CHRMechanismSuite OR "CN-Spec") since:2025-06-01`
+1. `url:"ailev/FPF"` → **Extremely high precision**. Caught almost every real mention with almost zero noise.
+2. `from:ailev (FPF OR "First Principles")` → Excellent for catching the author himself promoting/using his own tool.
 
-**Good supporting queries:**
-- `"First Principles Framework" (github OR spec OR ailev) since:2025-06-01`
-- `url:github.com FPF since:2025-06-01`
+### Good Supporting Queries
+- `FPF (CharacteristicSpace OR CHRMechanismSuite OR "CN-Spec")` → Low volume but high relevance when it hits.
+- `"First Principles Framework" (github OR spec OR ailev)` → Decent, surfaces some good context.
 
-### Periodic Deep Sweeps (weekly or when needed)
-- Broad `FPF since:2025-06-01` (then manually filter)
-- Look for quote tweets and replies to known good posts
+### Noisy / Lower Value
+- `url:github.com FPF` → Catches many unrelated FPF repos (e.g. security tools, fuzzy search tools). Requires heavy filtering.
 
-### Terms worth monitoring
-- Direct repo links (`ailev/FPF`)
-- Internal concepts: `CharacteristicSpace`, `CHRMechanismSuite`, `CN-Spec`
-- Phrases people actually use: "load FPF", "use FPF from file", "FPF from github"
+### Key Lesson
+The single most effective daily query is:
+**`url:"ailev/FPF" since:2025-06-01`**
 
-### Accounts worth monitoring closely
-- `@ailev` (the author)
-- People who have recommended it before (@Valeriy_Pvlvch, @modern_literacy, @erthad, etc.)
+It is dramatically cleaner than broad "FPF" searches while still capturing the real signal (people linking and recommending the actual implementation).
 
-This combination has proven to surface almost all real signal while keeping noise manageable.
+Recommendation: Make `url:"ailev/FPF"` the primary daily query, supplemented by the others.
