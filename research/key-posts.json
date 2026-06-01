@@ -1,30 +1,42 @@
 {
   "description": "Key mentions of FPF spec / implementation (summer 2025 onwards)",
-  "last_updated": "2026-06-01",
+  "last_updated": "2026-06-02",
   "posts": [
     {
       "id": "1998052099012125171",
       "date": "2025-12-08",
       "author": "@ailev",
-      "notes": "Public announcement that First Principles Framework (FPF) is now on GitHub: https://github.com/ailev/FPF. Marks the public release of the repo."
+      "notes": "Public announcement that the First Principles Framework (FPF) is now on GitHub: https://github.com/ailev/FPF. Marks the public release of the repo."
+    },
+    {
+      "id": "2039071280394105002",
+      "date": "2026-03-31",
+      "author": "@RussianMedley",
+      "notes": "Casual mention: \"First Principles Framework от ailev\" (low engagement)."
     },
     {
       "id": "2027723216517525695",
       "date": "2026-02-28",
       "author": "@Valeriy_Pvlvch",
-      "notes": "Recommends the repo and calls it 'First Principles Framework by @ailev'"
+      "notes": "Recommends the repo and explicitly calls it \"First Principles Framework by @ailev\"."
+    },
+    {
+      "id": "2042832556756742349",
+      "date": "2026-04-11",
+      "author": "@ailev",
+      "notes": "Usage note: how to load the FPF file in chat or for AI agents and compare results with/without it."
     },
     {
       "id": "2045152180617748499",
       "date": "2026-04-17",
       "author": "@modern_literacy",
-      "notes": "Recommends https://github.com/ailev/FPF as the 'HardCore version' for agents"
+      "notes": "Recommends https://github.com/ailev/FPF as the \"HardCore version\" for empowering agents with skills."
     },
     {
       "id": "2050660980661665938",
       "date": "2026-05-02",
       "author": "@erthad",
-      "notes": "Recommends loading the repo for CN-Spec generation using CharacteristicSpace/CHRMechanismSuite"
+      "notes": "Recommends loading the repo for CN-Spec generation using CharacteristicSpace/CHRMechanismSuite."
     }
   ]
 }
