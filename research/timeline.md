@@ -4,28 +4,21 @@
 - Only posts discussing **FPF** (First Principle Framework) as a specific spec or framework
 - **Time window**: From the beginning of 2026 onwards only
 
-General "first principles thinking" content is excluded, regardless of date.
-
 ---
 
-## 2026 (Current Research Window)
+## 2026 Findings
 
-Public discussion of an **FPF spec** on X has been very limited so far in 2026.
+Public discussion of an **FPF spec** remains extremely rare.
 
-Targeted searches for:
-- "FPF spec"
-- "FPF framework"
-- "First Principle Framework"
-- "FPF specification"
+### February 2026
+- **@spaceman_gilda** (Sankalp Gilda) and collaborator published work formalizing a "First Principles Framework (FPF)" for epistemic metadata and trust aggregation in engineering/AI systems.
+  - They define primitives like epistemic layers and F–G–R trust tuples.
+  - Paper: https://arxiv.org/abs/2601.21116
+  - This is one of the very few public uses of "FPF" as an acronym for First Principles Framework in 2026.
 
-...have returned almost no relevant public posts within 2026.
+### Other 2026 Activity
+After extensive searches for "FPF spec", "FPF framework", "First Principle Framework", etc., almost no other relevant public discussion was found in the first five months of 2026.
 
-This suggests that as of May 2026, the FPF specification is not yet a widely discussed topic publicly on X.
-
----
-
-## Pre-2026 (Out of Scope)
-
-All research prior to 2026 has been excluded per current scope rules.
+This reinforces that FPF as a named specification is not widely discussed publicly on X at this time.
 
 Last updated: 2026-05-31

@@ -1,6 +1,13 @@
 {
-  "description": "Posts specifically discussing FPF spec / First Principle Framework (strict scope)",
+  "description": "Posts specifically discussing FPF spec / First Principle Framework (strict scope, 2026+)",
   "last_updated": "2026-05-31",
-  "note": "As of this date, no high-signal public posts matching the strict FPF spec scope have been identified on X.",
-  "posts": []
+  "posts": [
+    {
+      "id": "2018661327250801092",
+      "date": "2026-02-03",
+      "author": "@spaceman_gilda",
+      "likes": 0,
+      "notes": "Formalizes 'First Principles Framework (FPF)' for epistemic metadata and conservative trust aggregation. References arXiv paper. One of the rare actual uses of FPF as acronym in 2026."
+    }
+  ]
 }
