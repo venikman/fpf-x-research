@@ -1,36 +1,36 @@
 # FPF X Research
 
-Public daily research archive tracking conversations about **First Principles Thinking** and **First Principle Framework** on X (Twitter).
+**Public, automatically updated research archive** tracking conversations about **First Principles Thinking** and **First Principle Framework** discussions on X (Twitter).
 
-## Live Site
+## Live UI
 
-**https://venikman.github.io/fpf-x-research/**
+**https://venikman.github.io/fpf-x-research/** (enable GitHub Pages → main / docs folder if not already active)
 
-## What this is
+## What We Track
 
-A living, automatically updated collection of high-signal posts, patterns, and insights about first-principles reasoning as discussed publicly on X.
+- High-signal posts and threads
+- Emerging frameworks and productization efforts
+- Format performance (what gets attention)
+- The slow adoption (or lack) of the "FPF" shorthand
+- Key voices and recurring patterns
 
-The goal is to understand how the concept spreads, who is productizing it, which formats win, and how the "FPF" framing (or lack thereof) evolves over time.
+## Repository Contents
 
-## Repository Structure
-
-```
-research/
-├── timeline.md              # Master chronological view
-├── daily/                   # One file per day of research
-├── patterns.md              # Recurring observations & trends
-├── tracked-accounts.md      # Key voices worth following
-└── key-posts.json           # Important post IDs for deep dives
-```
+- `research/timeline.md` — Master living timeline
+- `research/daily/` — Daily research snapshots
+- `research/patterns.md` — Observed trends
+- `research/tracked-accounts.md` — Accounts worth following
+- `research/key-posts.json` — Important posts with metadata
+- `docs/index.html` — The public website
 
 ## Automation
 
-A scheduled agent runs daily searches on X and automatically commits new findings here.
+A daily scheduled agent runs fresh X searches and commits new findings automatically.
 
-## Contributing / Suggesting
+## How to Use
 
-Open an issue or mention interesting posts/accounts. Manual updates can also be triggered.
+- Browse the live site for the nicest experience
+- View raw files on GitHub for data/analysis
+- Open issues with interesting posts or accounts you want tracked
 
-## License
-
-Research data is provided as-is for reference.
+Data is collected for internal FPF work but made public in case it is useful to others.
