@@ -3,25 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FPF X Research • Summer 2025+</title>
+  <title>FPF X Research • Timeline</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .timeline-item { position: relative; padding-left: 2rem; }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0.6rem;
+      top: 0;
+      bottom: -1.5rem;
+      width: 2px;
+      background: #334155;
+    }
+    .timeline-item:last-child:before { display: none; }
+    .post-link {
+      transition: all 0.1s ease;
+    }
+    .post-link:hover {
+      background-color: #0f172a;
+      transform: translateX(2px);
+    }
+  </style>
 </head>
 <body class="bg-slate-950 text-slate-200">
-  <div class="max-w-3xl mx-auto p-8">
-    <h1 class="text-4xl font-bold tracking-tight">FPF X Research</h1>
-    <p class="mt-2 text-slate-400">Mentions of the FPF spec &amp; https://github.com/ailev/FPF — from summer 2025 onwards</p>
-
-    <div class="mt-8 p-6 bg-slate-900 rounded-2xl border border-slate-800">
-      <div class="font-semibold mb-2">Key Finding from Sweep (Summer 2025 – June 2026)</div>
-      <ul class="text-sm text-slate-300 space-y-2">
-        <li><strong>Dec 8, 2025</strong> — @ailev publicly releases FPF on GitHub (the main launch announcement).</li>
-        <li><strong>2026</strong> — Series of recommendations of the repo by @Valeriy_Pvlvch, @modern_literacy, @erthad.</li>
-      </ul>
-      <p class="mt-4 text-xs text-slate-400">Public discussion remains mostly direct repo recommendations rather than broad abstract talk about an "FPF spec".</p>
+  <div class="max-w-3xl mx-auto px-6 py-10">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h1 class="text-4xl font-semibold tracking-tighter">FPF X Research</h1>
+        <p class="text-slate-400 mt-1">Mentions of the FPF spec &amp; implementation • Summer 2025+</p>
+      </div>
+      <a href="https://github.com/venikman/fpf-x-research" target="_blank"
+         class="flex items-center gap-x-2 text-sm px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-2xl transition-colors">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
     </div>
 
-    <div class="mt-6 text-sm text-slate-400">
-      Full data + methodology: <a href="https://github.com/venikman/fpf-x-research" class="text-cyan-400 hover:underline">GitHub</a>
+    <!-- Scope -->
+    <div class="mb-8 text-sm text-slate-400">
+      Only posts discussing the actual <strong>FPF spec</strong> or <a href="https://github.com/ailev/FPF" target="_blank" class="text-cyan-400 hover:underline">https://github.com/ailev/FPF</a>.
+      General first-principles thinking is excluded.
+    </div>
+
+    <!-- Timeline -->
+    <div>
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-x-2">
+        <i class="fa-solid fa-clock text-cyan-400"></i>
+        <span>Timeline</span>
+      </h2>
+
+      <div class="space-y-6">
+        <!-- Dec 2025 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[3px] top-1.5 w-3 h-3 rounded-full bg-cyan-400"></div>
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="font-mono text-xs text-cyan-400 tracking-widest">DEC 8, 2025</div>
+              <div class="mt-1 font-medium">@ailev publicly releases FPF on GitHub</div>
+              <div class="text-sm text-slate-400 mt-1">“The First Principles Framework (FPF) is now on GitHub.” — Marks the public launch of the implementation.</div>
+            </div>
+            <a href="https://x.com/i/web/status/1998052099012125171" target="_blank"
+               class="post-link flex-shrink-0 inline-flex items-center gap-x-1.5 text-xs px-3 py-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-xl text-cyan-400">
+              <span>View post</span>
+              <i class="fa-solid fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Feb 2026 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[3px] top-1.5 w-3 h-3 rounded-full bg-slate-600"></div>
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="font-mono text-xs text-slate-400 tracking-widest">FEB 28, 2026</div>
+              <div class="mt-1 font-medium">@Valeriy_Pvlvch recommends the repo</div>
+              <div class="text-sm text-slate-400 mt-1">Calls it “First Principles Framework by @ailev” and shares the GitHub link.</div>
+            </div>
+            <a href="https://x.com/i/web/status/2027723216517525695" target="_blank"
+               class="post-link flex-shrink-0 inline-flex items-center gap-x-1.5 text-xs px-3 py-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-xl text-cyan-400">
+              <span>View post</span>
+              <i class="fa-solid fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Apr 2026 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[3px] top-1.5 w-3 h-3 rounded-full bg-slate-600"></div>
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="font-mono text-xs text-slate-400 tracking-widest">APR 17, 2026</div>
+              <div class="mt-1 font-medium">@modern_literacy recommends FPF for agents</div>
+              <div class="text-sm text-slate-400 mt-1">Calls https://github.com/ailev/FPF the “HardCore version” of skills for empowering AI agents.</div>
+            </div>
+            <a href="https://x.com/i/web/status/2045152180617748499" target="_blank"
+               class="post-link flex-shrink-0 inline-flex items-center gap-x-1.5 text-xs px-3 py-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-xl text-cyan-400">
+              <span>View post</span>
+              <i class="fa-solid fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- May 2026 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[3px] top-1.5 w-3 h-3 rounded-full bg-slate-600"></div>
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="font-mono text-xs text-slate-400 tracking-widest">MAY 2, 2026</div>
+              <div class="mt-1 font-medium">@erthad recommends using FPF for spec generation</div>
+              <div class="text-sm text-slate-400 mt-1">Suggests loading the repo to generate CN-Spec using CharacteristicSpace / CHRMechanismSuite.</div>
+            </div>
+            <a href="https://x.com/i/web/status/2050660980661665938" target="_blank"
+               class="post-link flex-shrink-0 inline-flex items-center gap-x-1.5 text-xs px-3 py-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-xl text-cyan-400">
+              <span>View post</span>
+              <i class="fa-solid fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-xs text-slate-500 border-t border-slate-800 pt-6">
+      Data is updated automatically when new relevant posts are found.<br>
+      Source &amp; full methodology: <a href="https://github.com/venikman/fpf-x-research" class="text-cyan-400 hover:underline">github.com/venikman/fpf-x-research</a>
     </div>
   </div>
 </body>
