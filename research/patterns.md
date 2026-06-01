@@ -4,12 +4,12 @@
 
 ## Main Finding
 
-Public discussion of the FPF spec/implementation on X is still quite limited even when going back to summer 2025.
+Public discussion of the FPF spec/implementation on X remains limited. The clearest and most consistent signal is direct recommendations of the actual repository (https://github.com/ailev/FPF).
 
-The clearest signals continue to be direct recommendations of https://github.com/ailev/FPF, with people referring to it as "First Principles Framework".
+## Search Insights (from running the full set)
 
-## Search Method
-- Broad "FPF" searches + GitHub repo links + full phrase "First principles framework"
-- Manual verification of context
+The single most effective query is `url:"ailev/FPF"`. It delivers high recall with very low noise.
+
+Broader queries (full phrase + general GitHub links) occasionally surface additional low-engagement mentions but require careful manual filtering.
 
 Last updated: 2026-06-01
