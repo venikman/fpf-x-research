@@ -1,24 +1,24 @@
 # FPF X Research — Master Timeline
 
 **Scope**:
-- Posts discussing **FPF** (First Principle Framework) as a specific spec/framework, including direct references to the implementation.
-- Time window: 2026 onwards only.
+- Only posts discussing **FPF** (First Principle Framework) as a specific spec or framework (including direct GitHub repo links).
+- **Time window**: Summer 2025 onwards (since 2025-06-01).
+- General "first principles thinking" content is excluded.
 
 ---
 
-## 2026 Findings
+## 2025–2026 Findings
 
-### February 2026
-- @Valeriy_Pvlvch recommends https://github.com/ailev/FPF, explicitly calling it "First Principles Framework by @ailev".
+Public discussion of the actual FPF implementation (https://github.com/ailev/FPF) has been limited but shows some signals through direct recommendations.
 
-### April 2026
-- @modern_literacy (Stanislau Niadbailau) recommends the "HardCore version" of agent skills: https://github.com/ailev/FPF
+### 2026
+- Feb: @Valeriy_Pvlvch recommends the repo and calls it "First Principles Framework by @ailev".
+- Apr: @modern_literacy recommends it as the "HardCore version" for agents.
+- May: @erthad recommends loading it for CN-Spec generation using CharacteristicSpace.
 
-### May 2026
-- @erthad recommends loading https://github.com/ailev/FPF to generate "CN-Spec" using CharacteristicSpace / CHRMechanismSuite. Notes that one may need to tell the AI not to use FPF terminology.
+No major new clusters of discussion found in the first half of 2026 beyond repo recommendations.
 
-These are currently the main public mentions of the actual FPF implementation on X in 2026.
+### Late 2025
+(Research window now includes this period — fresh searches will be run going back to summer 2025.)
 
-General "first principles thinking" posts remain excluded.
-
-Last updated: 2026-06-01
+Last major update: 2026-06-01 (extended to summer 2025)

@@ -1,16 +1,15 @@
 # Observed Patterns — FPF X Research
 
-**Time Scope**: 2026 onwards only
+**Time Scope**: Summer 2025 onwards (since 2025-06-01)
 
-## Key Pattern: GitHub Repo Recommendations
+## Main Finding
 
-The main way people are publicly discussing the actual FPF in 2026 is by directly linking to https://github.com/ailev/FPF and recommending it for advanced structured reasoning / agent work.
+Public discussion of the FPF spec/implementation on X is still quite limited even when going back to summer 2025.
 
-People refer to it as:
-- "First Principles Framework"
-- The "HardCore version" for agents
-- A tool for generating specs (CN-Spec) using concepts like CharacteristicSpace
+The clearest signals continue to be direct recommendations of https://github.com/ailev/FPF, with people referring to it as "First Principles Framework".
 
-There is almost no abstract discussion of "FPF spec" without referencing the implementation.
+## Search Method
+- Broad "FPF" searches + GitHub repo links + full phrase "First principles framework"
+- Manual verification of context
 
 Last updated: 2026-06-01
