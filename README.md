@@ -2,30 +2,20 @@
 
 Public research tracking mentions of **FPF spec** (First Principle Framework specification) on X.
 
-## Important Scope Note
+## Scope (Strict)
 
-This project only tracks posts that specifically discuss **FPF** as a concrete framework or specification (e.g. "FPF spec", "FPF framework", "First Principle Framework").
+- Only posts discussing **FPF** as a specific spec/framework ("FPF spec", "FPF framework", "First Principle Framework", etc.)
+- **Time window**: Beginning of 2026 onwards only
+- General "first principles thinking" content is excluded
 
-General discussion of "first principles thinking" (even high-quality threads) is **out of scope**. Example: The popular Sahil Bloom thread on first principles thinking is not included.
+## Current Status
 
-## Current Finding
-
-As of late May 2026, there appears to be **very little public discussion** on X about an FPF specification.
+As of late May 2026, public discussion of an FPF specification on X remains very limited.
 
 ## Live Site
 
 https://venikman.github.io/fpf-x-research/
 
-## Repository Structure
+## Repository
 
-- `index.html` — Public website
-- `research/` — Research data
-  - `timeline.md`
-  - `daily/`
-  - `patterns.md`
-  - `key-posts.json`
-  - `tracked-accounts.md`
-
-## Automation
-
-Daily agent searches for exact FPF spec mentions and updates this repo.
+https://github.com/venikman/fpf-x-research
