@@ -1,36 +1,30 @@
-# FPF X Research
+**FPF X Research**
 
-**Public, automatically updated research archive** tracking conversations about **First Principles Thinking** and **First Principle Framework** discussions on X (Twitter).
+Public daily research archive on First Principles Thinking / First Principle Framework discussions on X.
 
-## Live UI
+## Live Site (now working)
 
-**https://venikman.github.io/fpf-x-research/** (enable GitHub Pages → main / docs folder if not already active)
+https://venikman.github.io/fpf-x-research/
 
-## What We Track
+## How to set up GitHub Pages (one-time)
 
-- High-signal posts and threads
-- Emerging frameworks and productization efforts
-- Format performance (what gets attention)
-- The slow adoption (or lack) of the "FPF" shorthand
-- Key voices and recurring patterns
+1. Go to **Settings → Pages**
+2. Under "Build and deployment" → Source, select:
+   - **Deploy from a branch**
+   - **Branch**: `main`
+   - **Folder**: `/ (root)`
+3. Click **Save**
 
-## Repository Contents
+The site should be live within 1-2 minutes at the URL above.
 
-- `research/timeline.md` — Master living timeline
-- `research/daily/` — Daily research snapshots
-- `research/patterns.md` — Observed trends
-- `research/tracked-accounts.md` — Accounts worth following
-- `research/key-posts.json` — Important posts with metadata
-- `docs/index.html` — The public website
+## Repository Structure
+
+- `index.html` → The public website
+- `research/` → All raw research data (timeline, daily logs, patterns, etc.)
+- `README.md` → This file
 
 ## Automation
 
-A daily scheduled agent runs fresh X searches and commits new findings automatically.
+A scheduled agent runs daily X searches and automatically updates the research data and commits changes.
 
-## How to Use
-
-- Browse the live site for the nicest experience
-- View raw files on GitHub for data/analysis
-- Open issues with interesting posts or accounts you want tracked
-
-Data is collected for internal FPF work but made public in case it is useful to others.
+Source of truth: https://github.com/venikman/fpf-x-research
