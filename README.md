@@ -1,28 +1,36 @@
 # FPF X Research
 
-**Public archive of daily research on First Principles Thinking / First Principle Framework discussions on X (Twitter).**
+Public daily research archive tracking conversations about **First Principles Thinking** and **First Principle Framework** on X (Twitter).
 
-## Live UI
+## Live Site
 
-**https://venikman.github.io/fpf-x-research/** (enable GitHub Pages after this push)
+**https://venikman.github.io/fpf-x-research/**
 
-## Contents
+## What this is
 
-- `research/timeline.md` — Master timeline
-- `research/daily/` — Daily snapshots
-- `research/patterns.md` — Observed patterns
-- `research/tracked-accounts.md`
-- `research/key-posts.json`
+A living, automatically updated collection of high-signal posts, patterns, and insights about first-principles reasoning as discussed publicly on X.
+
+The goal is to understand how the concept spreads, who is productizing it, which formats win, and how the "FPF" framing (or lack thereof) evolves over time.
+
+## Repository Structure
+
+```
+research/
+├── timeline.md              # Master chronological view
+├── daily/                   # One file per day of research
+├── patterns.md              # Recurring observations & trends
+├── tracked-accounts.md      # Key voices worth following
+└── key-posts.json           # Important post IDs for deep dives
+```
 
 ## Automation
 
-Daily updates are performed by scheduled agent runs that search X and push new findings here.
+A scheduled agent runs daily searches on X and automatically commits new findings here.
 
-## How to enable the UI
+## Contributing / Suggesting
 
-1. Go to repo **Settings > Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main`, Folder: `/docs`
-4. Save
+Open an issue or mention interesting posts/accounts. Manual updates can also be triggered.
 
-The site will be live at `https://venikman.github.io/fpf-x-research/` shortly after.
+## License
+
+Research data is provided as-is for reference.

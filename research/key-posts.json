@@ -1,1 +1,10 @@
-{"description":"Notable post IDs...","last_updated":"2026-05-31","posts":[...]}
+{
+  "description": "Notable post IDs for deep dives",
+  "last_updated": "2026-05-31",
+  "posts": [
+    {"id": "1479806367099719680", "date": "2022-01-08", "author": "SahilBloom", "likes": 6270, "notes": "Foundational thread calling it a powerful framework"},
+    {"id": "1786786124528271694", "date": "2024-05-04", "author": "cajunkoi", "likes": 1596, "views": 715322, "notes": "Highest reach thread"},
+    {"id": "2052736963309187399", "date": "2026-05-08", "author": "jaynitx", "likes": 5702, "notes": "Recent high engagement - Elon 5-step process"},
+    {"id": "2060582954187817141", "date": "2026-05-30", "author": "XFreeze", "likes": 562, "notes": "Strong recent visual performer"}
+  ]
+}
