@@ -7,18 +7,20 @@
 
 ---
 
-## 2025–2026 Findings
+## Key Milestones
 
-Public discussion of the actual FPF implementation (https://github.com/ailev/FPF) has been limited but shows some signals through direct recommendations.
+### December 8, 2025 — Public Launch
+- **@ailev** announces that the First Principles Framework (FPF) is now on GitHub:
+  - "I’ve just taken a step I’ve been postponing for a while: the First Principles Framework (FPF) is now on GitHub."
+  - Link: https://github.com/ailev/FPF
+  - Notes that colleagues already use it in projects.
+  - This marks the public release of the implementation.
 
-### 2026
-- Feb: @Valeriy_Pvlvch recommends the repo and calls it "First Principles Framework by @ailev".
-- Apr: @modern_literacy recommends it as the "HardCore version" for agents.
-- May: @erthad recommends loading it for CN-Spec generation using CharacteristicSpace.
+### 2026 Recommendations
+- Feb 28: @Valeriy_Pvlvch recommends the repo, explicitly calling it "First Principles Framework by @ailev".
+- Apr 17: @modern_literacy recommends https://github.com/ailev/FPF as the "HardCore version" for agents.
+- May 2: @erthad recommends loading the repo to generate CN-Spec using CharacteristicSpace/CHRMechanismSuite.
 
-No major new clusters of discussion found in the first half of 2026 beyond repo recommendations.
+Public discussion remains mostly in the form of direct recommendations of the repo rather than abstract discussion of an "FPF spec".
 
-### Late 2025
-(Research window now includes this period — fresh searches will be run going back to summer 2025.)
-
-Last major update: 2026-06-01 (extended to summer 2025)
+Last updated: 2026-06-01 (sweep from summer 2025)
