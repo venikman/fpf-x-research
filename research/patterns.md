@@ -1,20 +1,15 @@
 # Observed Patterns — FPF X Research
 
-## 1. The Elon Dependency (Strongest Pattern)
-~70-80% of posts with >300 likes directly reference Elon Musk, SpaceX, or Tesla examples.
+## Current Main Finding
 
-## 2. Format Winners
-1. Elon quote graphics + short video clips (highest ceiling)
-2. Numbered frameworks (3/4/5 steps)
-3. Prompt templates / AI workflows
-4. Personal application stories
+As of late May 2026, there is **very little to no public discussion** on X specifically about an "FPF spec" or "First Principle Framework" as a defined specification.
 
-## 3. Productization Trend (2025–2026)
-Clear shift from free explainers toward monetized artifacts (courses, books, prompt packs).
+Searches for exact and near-exact phrases return almost no relevant results.
 
-## 4. "FPF" Acronym Status
-As of late May 2026: Effectively zero organic public usage of the acronym "FPF".
+## Implications
 
-**Opportunity**: The shorthand is still available to own.
+- FPF may still be primarily an internal / private concept at this stage.
+- The acronym "FPF" does not appear to be in common public use for this idea on X.
+- Opportunity exists to define and promote the spec publicly.
 
 Last updated: 2026-05-31
