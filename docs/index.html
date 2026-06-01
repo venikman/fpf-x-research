@@ -1,220 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FPF X Research • First Principles on X</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-  :root { --accent: #67e8f9; }
-  body { font-family: 'Inter', system-ui, sans-serif; }
-  .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.02em; }
-  .section-title { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.015em; }
-  .nav-tab { transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1); }
-  .nav-tab.active { background-color: #0f172a; color: white; border-color: #334155; }
-  .research-card { transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.2s; }
-  .research-card:hover { transform: translateY(-1px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
-  .timeline-dot { box-shadow: 0 0 0 4px #0f172a; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPF X Research • First Principles on X</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.025em; }
+    .nav-active { border-bottom: 2px solid #67e8f9; color: white; }
+    .research-card { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .research-card:hover { transform: translateY(-2px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+    .section-header { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.01em; }
+    .timeline-item { position: relative; padding-left: 2.25rem; }
+    .timeline-item:before { content: ''; position: absolute; left: 0.65rem; top: 0.35rem; bottom: -1.1rem; width: 2px; background: #334155; }
+    .timeline-item:last-child:before { display: none; }
+    .metric { font-variant-numeric: tabular-nums; }
+    .post-row { transition: background-color 0.1s; }
+    .post-row:hover { background-color: #0f172a; }
+    .data-table th { font-weight: 500; color: #64748b; }
+  </style>
 </head>
 <body class="bg-slate-950 text-slate-200">
-<div class="max-w-screen-xl mx-auto">
-  <!-- Top Nav -->
-  <div class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-slate-800">
-    <div class="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-16">
-      <div class="flex items-center gap-x-3">
-        <div class="flex items-center gap-x-2.5">
-          <div class="w-8 h-8 bg-cyan-400 rounded-2xl flex items-center justify-center">
-            <i class="fa-solid fa-brain text-slate-950"></i>
+  <!-- Top Navigation -->
+  <nav class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur-lg">
+    <div class="max-w-screen-2xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-x-3">
+          <div class="flex items-center gap-x-2.5">
+            <div class="w-9 h-9 bg-cyan-400 rounded-2xl flex items-center justify-center shadow-inner">
+              <i class="fa-solid fa-brain text-slate-950 text-xl"></i>
+            </div>
+            <div>
+              <span class="font-semibold text-2xl tracking-tighter">FPF X Research</span>
+            </div>
           </div>
-          <div class="font-semibold text-2xl tracking-tighter">FPF X Research</div>
+          <div class="hidden sm:block px-2.5 py-0.5 text-[10px] font-mono tracking-[1.5px] bg-slate-900 text-cyan-400/90 rounded-full border border-slate-800">PUBLIC ARCHIVE</div>
         </div>
-        <div class="px-2.5 py-1 text-[10px] font-mono tracking-[1px] bg-slate-900 text-cyan-400 rounded-xl border border-slate-800">DAILY • PUBLIC</div>
-      </div>
-      <div class="flex items-center gap-x-2 text-sm">
-        <a href="https://github.com/venikman/fpf-x-research" class="flex items-center gap-x-2 px-4 h-9 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-sm transition-colors">
-          <i class="fa-brands fa-github"></i>
-          <span class="hidden sm:inline">GitHub</span>
-        </a>
-        <a href="https://github.com/venikman/fpf-x-research/tree/main/research" class="flex items-center gap-x-2 px-4 h-9 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-sm transition-colors">
-          <span>Raw Data</span>
-        </a>
+
+        <div class="flex items-center gap-x-2">
+          <a href="https://github.com/venikman/fpf-x-research" target="_blank"
+             class="flex items-center gap-x-2 px-4 py-2 text-sm rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 transition-colors">
+            <i class="fa-brands fa-github"></i>
+            <span class="hidden md:inline font-medium">GitHub</span>
+          </a>
+          <a href="https://github.com/venikman/fpf-x-research/tree/main/research" target="_blank"
+             class="flex items-center gap-x-2 px-4 py-2 text-sm rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 transition-colors">
+            <i class="fa-solid fa-folder-open"></i>
+            <span class="hidden md:inline font-medium">Raw Data</span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="px-6 pt-8 pb-16 max-w-screen-xl mx-auto">
+  <div class="max-w-screen-2xl mx-auto px-6 pt-8 pb-20">
     <!-- Hero -->
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-x-2 text-xs font-medium tracking-[1.5px] bg-slate-900 border border-slate-800 text-cyan-400 px-3 py-1 rounded-3xl mb-4">PUBLIC RESEARCH ARCHIVE</div>
-      <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter leading-none font-display">First Principles<br>Thinking on X</h1>
-      <p class="mt-5 text-xl text-slate-400 max-w-md">Daily monitoring of how people discuss, apply, and productize first-principles reasoning publicly.</p>
-      
-      <div class="flex items-center gap-3 mt-6">
-        <button onclick="document.getElementById('timeline').scrollIntoView({behavior:'smooth'})" 
-                class="px-6 h-11 rounded-3xl bg-white text-slate-950 font-medium text-sm flex items-center justify-center hover:bg-white/90 transition-all active:scale-[0.985]">
-          Explore Timeline
+    <div class="max-w-4xl">
+      <div class="flex items-center gap-x-3 mb-3">
+        <div class="inline-flex items-center gap-x-2 px-3 py-1 bg-slate-900 border border-slate-800 rounded-3xl text-xs font-medium tracking-widest text-cyan-400">
+          <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+          UPDATED DAILY
+        </div>
+        <div class="text-xs text-slate-500">Last updated: <span class="font-medium text-slate-400">May 31, 2026</span></div>
+      </div>
+
+      <h1 class="text-7xl md:text-7xl font-semibold tracking-tighter leading-[0.95] font-display">
+        First Principles<br>Thinking on X
+      </h1>
+      <p class="mt-5 max-w-lg text-xl text-slate-400">
+        A living archive of how people discuss, apply, and commercialize first-principles reasoning publicly on X.
+      </p>
+
+      <div class="flex flex-wrap gap-3 mt-7">
+        <button onclick="document.getElementById('latest-daily').scrollIntoView({behavior:'smooth'})"
+                class="px-6 h-12 rounded-3xl bg-white text-slate-950 font-semibold text-sm flex items-center gap-x-2 hover:bg-white/90 active:scale-[0.985] transition-all">
+          <i class="fa-solid fa-calendar-day"></i>
+          <span>View Latest Daily</span>
         </button>
-        <a href="#patterns" class="px-5 h-11 rounded-3xl border border-slate-700 hover:bg-slate-900 flex items-center text-sm transition-colors">View Patterns</a>
-      </div>
-      <div class="mt-4 text-xs text-slate-500">Last updated: <span class="text-slate-400">May 31, 2026</span> • Updates automatically every day</div>
-    </div>
-
-    <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
-        <div class="text-4xl font-semibold tracking-tighter">6,270</div>
-        <div class="text-sm text-slate-400 mt-1.5">Highest engagement post</div>
-        <div class="text-[10px] text-slate-500 mt-1">@SahilBloom, Jan 2022</div>
-      </div>
-      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
-        <div class="text-4xl font-semibold tracking-tighter">715k</div>
-        <div class="text-sm text-slate-400 mt-1.5">Peak views</div>
-        <div class="text-[10px] text-slate-500 mt-1">@cajunkoi, May 2024</div>
-      </div>
-      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
-        <div class="text-4xl font-semibold tracking-tighter">0</div>
-        <div class="text-sm text-slate-400 mt-1.5">Public "FPF" acronym usage</div>
-        <div class="text-[10px] text-emerald-400 mt-1">Still available to own</div>
-      </div>
-      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
-        <div class="text-4xl font-semibold tracking-tighter">2022–2026</div>
-        <div class="text-sm text-slate-400 mt-1.5">Continuous coverage</div>
+        <button onclick="document.getElementById('timeline').scrollIntoView({behavior:'smooth'})"
+                class="px-6 h-12 rounded-3xl border border-slate-700 hover:bg-slate-900 font-medium text-sm flex items-center gap-x-2 transition-colors">
+          <span>Browse Timeline</span>
+        </button>
       </div>
     </div>
 
-    <!-- Tabs -->
-    <div class="mt-12 border-b border-slate-800">
-      <div class="flex gap-x-1 text-sm">
-        <button onclick="showTab('overview')" id="tab-overview" class="nav-tab active px-5 py-2.5 rounded-t-2xl border border-slate-800 border-b-transparent text-sm font-medium">Overview</button>
-        <button onclick="showTab('timeline')" id="tab-timeline" class="nav-tab px-5 py-2.5 rounded-t-2xl hover:bg-slate-900 text-sm font-medium">Timeline</button>
-        <button onclick="showTab('posts')" id="tab-posts" class="nav-tab px-5 py-2.5 rounded-t-2xl hover:bg-slate-900 text-sm font-medium">Key Posts</button>
-        <button onclick="showTab('patterns')" id="tab-patterns" class="nav-tab px-5 py-2.5 rounded-t-2xl hover:bg-slate-900 text-sm font-medium">Patterns</button>
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
+      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-5">
+        <div class="text-[11px] font-medium text-slate-500 tracking-wider">HIGHEST ENGAGEMENT</div>
+        <div class="mt-2 text-4xl font-semibold tracking-tighter metric">6,270</div>
+        <div class="text-sm mt-1 text-slate-400">@SahilBloom • Jan 2022</div>
+      </div>
+      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-5">
+        <div class="text-[11px] font-medium text-slate-500 tracking-wider">PEAK VIEWS</div>
+        <div class="mt-2 text-4xl font-semibold tracking-tighter metric">715k</div>
+        <div class="text-sm mt-1 text-slate-400">@cajunkoi • May 2024</div>
+      </div>
+      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-5">
+        <div class="text-[11px] font-medium text-slate-500 tracking-wider">RECENT PEAK</div>
+        <div class="mt-2 text-4xl font-semibold tracking-tighter metric">5,702</div>
+        <div class="text-sm mt-1 text-slate-400">@jaynitx • May 2026</div>
+      </div>
+      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-5">
+        <div class="text-[11px] font-medium text-slate-500 tracking-wider">"FPF" ACRONYM USE</div>
+        <div class="mt-2 text-4xl font-semibold tracking-tighter metric">0</div>
+        <div class="text-sm mt-1 text-emerald-400">Still completely open</div>
+      </div>
+      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="text-[11px] font-medium text-slate-500 tracking-wider">COVERAGE</div>
+          <div class="mt-1 text-4xl font-semibold tracking-tighter">4+ years</div>
+        </div>
+        <div class="text-xs text-slate-500">2022 — Present • Daily updates</div>
       </div>
     </div>
 
-    <!-- Tab Contents -->
-    <div id="content-overview" class="tab-content pt-8">
-      <div class="prose prose-invert max-w-none text-slate-300">
-        <p>This project tracks how the idea of <strong>first principles thinking</strong> is discussed, taught, and productized on X. We capture high-signal posts, emerging frameworks, and the slow shift from free explanation toward paid courses and books.</p>
-        <p class="text-sm text-slate-400 mt-3">Data is collected daily via automated searches and committed here. The raw files in <code>research/</code> are the source of truth.</p>
+    <!-- Latest Daily -->
+    <div id="latest-daily" class="mt-14">
+      <div class="flex items-center justify-between mb-4">
+        <div class="section-header flex items-center gap-x-2">
+          <i class="fa-solid fa-clock text-cyan-400"></i>
+          <span>Latest Daily Snapshot</span>
+        </div>
+        <a href="https://github.com/venikman/fpf-x-research/blob/main/research/daily/2026-05-31.md" target="_blank"
+           class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-x-1">
+          FULL LOG <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
       </div>
-      
-      <div class="mt-8 p-6 bg-slate-900 border border-slate-800 rounded-3xl">
-        <div class="font-medium mb-2">Latest Daily Snapshot (2026-05-31)</div>
-        <div class="text-sm text-slate-400">Steady activity. Strongest recent signals from clean Elon quote graphics and practical advice for developers/investors. Productization momentum continuing from @alc2022 and @AaronPowell_CA. Zero organic use of the "FPF" acronym observed.</div>
-        <a href="https://github.com/venikman/fpf-x-research/blob/main/research/daily/2026-05-31.md" class="text-cyan-400 text-xs mt-3 inline-block hover:underline">Read full daily log →</a>
-      </div>
-    </div>
 
-    <div id="content-timeline" class="tab-content pt-8 hidden">
-      <div class="space-y-6">
-        <div class="flex gap-4">
-          <div class="w-px bg-slate-800 mt-2 mb-2"></div>
-          <div class="flex-1 space-y-8">
-            <div>
-              <div class="text-cyan-400 text-xs font-medium tracking-wider">JAN 2022</div>
-              <div class="font-medium mt-0.5">@SahilBloom publishes the highest-signal foundational thread (6.2k likes)</div>
-            </div>
-            <div>
-              <div class="text-cyan-400 text-xs font-medium tracking-wider">MAY 2024</div>
-              <div class="font-medium mt-0.5">@cajunkoi delivers the highest-reach single thread to date (715k views)</div>
-            </div>
-            <div>
-              <div class="text-cyan-400 text-xs font-medium tracking-wider">MAY 2026</div>
-              <div class="font-medium mt-0.5">@jaynitx hits 5.7k likes with "Elon’s 5-step first-principles process"</div>
+      <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-7">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="font-semibold">May 31, 2026</div>
+            <div class="text-sm text-slate-400">Steady activity • No new mega-viral threads</div>
+          </div>
+          <div class="text-xs px-3 py-1 bg-slate-950 rounded-2xl border border-slate-700">1 day ago</div>
+        </div>
+
+        <div class="mt-5 grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+          <div>
+            <div class="font-medium text-slate-400 mb-1.5 text-xs tracking-wider">DOMINANT THEMES</div>
+            <ul class="space-y-1 text-slate-300">
+              <li class="flex gap-x-2"><span class="text-cyan-400">•</span> Clean Elon quote graphics</li>
+              <li class="flex gap-x-2"><span class="text-cyan-400">•</span> Practical advice for developers &amp; investors</li>
+              <li class="flex gap-x-2"><span class="text-cyan-400">•</span> Continued productization signals</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-medium text-slate-400 mb-1.5 text-xs tracking-wider">STANDOUT POSTS</div>
+            <div class="space-y-1 text-slate-300">
+              <div>@XFreeze — 562 likes (Elon quote graphic)</div>
+              <div>@Abhishekcur — 149 likes (developer advice)</div>
+              <div>@jawwwn_ — 87 likes (SpaceX "clean slate" clip)</div>
             </div>
           </div>
         </div>
+
+        <div class="mt-5 pt-4 border-t border-slate-800 text-xs text-emerald-400">
+          Productization momentum: @AaronPowell_CA actively promoting dedicated first-principles book + @alc2022 biology module
+        </div>
       </div>
-      <div class="mt-4 text-xs"><a href="https://github.com/venikman/fpf-x-research/blob/main/research/timeline.md" class="text-cyan-400 hover:underline">View complete timeline on GitHub →</a></div>
     </div>
 
-    <div id="content-posts" class="tab-content pt-8 hidden">
-      <div class="mb-4 flex items-center justify-between">
-        <div class="text-sm font-medium">Notable High-Signal Posts</div>
-        <input id="post-search" type="text" placeholder="Search posts..." 
-               class="bg-slate-900 border border-slate-700 text-sm rounded-2xl px-4 h-9 w-64 focus:outline-none focus:border-slate-500" onkeyup="filterPosts()">
+    <!-- Timeline -->
+    <div id="timeline" class="mt-14">
+      <div class="flex items-baseline justify-between mb-5">
+        <div class="section-header">Timeline</div>
+        <a href="https://github.com/venikman/fpf-x-research/blob/main/research/timeline.md" target="_blank"
+           class="text-xs text-cyan-400 hover:underline">View full version →</a>
       </div>
-      <div id="posts-list" class="space-y-3 text-sm"></div>
+
+      <div class="max-w-3xl space-y-8">
+        <!-- 2022 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[1px] top-1 w-4 h-4 rounded-full border-2 border-cyan-400 bg-slate-950 timeline-dot"></div>
+          <div class="text-xs font-medium text-cyan-400 tracking-widest">JANUARY 2022</div>
+          <div class="font-semibold mt-1">@SahilBloom publishes foundational thread</div>
+          <div class="text-sm text-slate-400 mt-1">Calls first-principles thinking “a powerful framework for deconstructing complex problems.” 6,270 likes. Still the highest-signal single post on the topic.</div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[1px] top-1 w-4 h-4 rounded-full border-2 border-slate-600 bg-slate-950 timeline-dot"></div>
+          <div class="text-xs font-medium text-cyan-400 tracking-widest">MAY 2024</div>
+          <div class="font-semibold mt-1">@cajunkoi delivers highest-reach thread to date</div>
+          <div class="text-sm text-slate-400 mt-1">715k views. “The most powerful thinking framework.” Includes strong video clips and practical Socratic questions. Best performing single piece of content found.</div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[1px] top-1 w-4 h-4 rounded-full border-2 border-slate-600 bg-slate-950 timeline-dot"></div>
+          <div class="text-xs font-medium text-cyan-400 tracking-widest">AUGUST 2025</div>
+          <div class="font-semibold mt-1">@Founder_Mode_ releases clean 3-step frameworks</div>
+          <div class="text-sm text-slate-400 mt-1">Multiple high-quality visual explainers. Strong, reusable format that continues to perform well.</div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="timeline-item">
+          <div class="absolute -left-[1px] top-1 w-4 h-4 rounded-full border-2 border-slate-600 bg-slate-950 timeline-dot"></div>
+          <div class="text-xs font-medium text-cyan-400 tracking-widest">MAY 2026</div>
+          <div class="font-semibold mt-1">Productization wave becomes visible</div>
+          <div class="text-sm text-slate-400 mt-1">
+            @jaynitx hits 5.7k likes with Elon’s 5-step process.<br>
+            @alc2022 launches “Biology first principles framework” course module.<br>
+            @AaronPowell_CA aggressively promotes dedicated book “YES, YOU CAN!”
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="content-patterns" class="tab-content pt-8 hidden">
+    <!-- Key Posts Explorer -->
+    <div class="mt-14">
+      <div class="flex items-center justify-between mb-4">
+        <div class="section-header">Key Posts Explorer</div>
+        <div class="flex items-center gap-x-2">
+          <button onclick="downloadPostsJSON()"
+                  class="text-xs px-3 py-1.5 rounded-2xl border border-slate-700 hover:bg-slate-900 flex items-center gap-x-1.5">
+            <i class="fa-solid fa-download text-xs"></i>
+            <span>Export JSON</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-3 flex gap-2">
+        <input id="post-search" type="text" placeholder="Search author or description..." 
+               class="flex-1 bg-slate-900 border border-slate-700 focus:border-slate-500 text-sm rounded-2xl px-4 h-10 outline-none" onkeyup="filterKeyPosts()">
+      </div>
+
+      <div class="border border-slate-800 rounded-3xl overflow-hidden">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-900">
+            <tr class="data-table">
+              <th class="text-left font-normal px-5 py-3">Post</th>
+              <th class="text-right font-normal px-5 py-3">Engagement</th>
+              <th class="text-right font-normal px-5 py-3 w-12"></th>
+            </tr>
+          </thead>
+          <tbody id="posts-tbody" class="divide-y divide-slate-800"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Patterns -->
+    <div id="patterns" class="mt-14">
+      <div class="section-header mb-4">Key Patterns Observed</div>
       <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
-          <div class="font-semibold mb-3">The Elon Dependency</div>
-          <div class="text-sm text-slate-400">70-80% of high-engagement posts still route through Elon/SpaceX/Tesla examples. Pure philosophical takes rarely break through without this hook.</div>
+        <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="flex items-center gap-x-2 text-cyan-400 mb-3">
+            <i class="fa-solid fa-link"></i>
+            <span class="font-semibold">The Elon Dependency</span>
+          </div>
+          <p class="text-sm text-slate-300">70–80% of posts with &gt;300 likes still route through Elon Musk, SpaceX, or Tesla battery/rocket examples. Pure philosophical or historical takes rarely break through without this hook.</p>
         </div>
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
-          <div class="font-semibold mb-3">Productization Wave (2025–26)</div>
-          <div class="text-sm text-slate-400">Clear shift from free explainers to paid artifacts: courses, books, and prompt systems built around "first principles frameworks".</div>
+
+        <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="flex items-center gap-x-2 text-cyan-400 mb-3">
+            <i class="fa-solid fa-chart-line"></i>
+            <span class="font-semibold">Productization Trend (2025–2026)</span>
+          </div>
+          <p class="text-sm text-slate-300">Clear shift from free explainers toward monetized artifacts: paid courses, books, and prompt systems explicitly built around “first principles frameworks.”</p>
+        </div>
+
+        <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="flex items-center gap-x-2 text-cyan-400 mb-3">
+            <i class="fa-solid fa-magic"></i>
+            <span class="font-semibold">Winning Formats</span>
+          </div>
+          <ul class="text-sm text-slate-300 space-y-1 mt-1">
+            <li>1. Elon quote graphics + short video clips</li>
+            <li>2. Clean numbered frameworks (3–5 steps)</li>
+            <li>3. Ready-to-use AI prompt templates</li>
+            <li>4. Personal domain application stories</li>
+          </ul>
+        </div>
+
+        <div class="research-card bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <div class="flex items-center gap-x-2 text-emerald-400 mb-3">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span class="font-semibold">Open Opportunity</span>
+          </div>
+          <p class="text-sm text-slate-300">As of May 2026, there is still <span class="font-medium">zero meaningful organic usage</span> of the acronym “FPF” for First Principle Framework. The shorthand remains completely available to claim.</p>
         </div>
       </div>
-      <div class="mt-4 text-xs"><a href="https://github.com/venikman/fpf-x-research/blob/main/research/patterns.md" class="text-cyan-400 hover:underline">Read full patterns analysis →</a></div>
+    </div>
+
+    <!-- Tracked Accounts -->
+    <div class="mt-14">
+      <div class="section-header mb-4">Actively Tracked Accounts</div>
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5">
+          <div class="font-medium mb-2 text-cyan-400">Tier 1 — High Signal</div>
+          <div class="space-y-2 text-slate-300">
+            <div>@SahilBloom — Foundational quality (2022)</div>
+            <div>@Founder_Mode_ — Best visual frameworks</div>
+            <div>@alc2022 — Productizing (Biology module)</div>
+            <div>@AaronPowell_CA — Aggressive book promotion</div>
+          </div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5">
+          <div class="font-medium mb-2 text-cyan-400">Tier 2 — Strong Performers</div>
+          <div class="space-y-2 text-slate-300">
+            <div>@cajunkoi — Highest reach single thread</div>
+            <div>@jaynitx — Recent high-engagement packaging</div>
+            <div>@engineers_feed — Broad engineering audience</div>
+            <div>@godofprompt — Turning concept into prompts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center text-xs text-slate-500 border-t border-slate-800 pt-6">
+      This site and all research data are automatically updated daily by a scheduled agent.<br>
+      Source of truth: <a href="https://github.com/venikman/fpf-x-research" class="text-cyan-400 hover:underline">github.com/venikman/fpf-x-research</a>
     </div>
   </div>
-</div>
 
 <script>
-const posts = [
-  {id: "1479806367099719680", author: "@SahilBloom", likes: 6270, date: "2022-01-08", note: "Foundational thread — calls it a powerful framework"},
-  {id: "1786786124528271694", author: "@cajunkoi", likes: 1596, date: "2024-05-04", note: "Highest reach thread (715k views)"},
-  {id: "2052736963309187399", author: "@jaynitx", likes: 5702, date: "2026-05-08", note: "Elon’s 5-step process (recent peak)"},
-  {id: "2060582954187817141", author: "@XFreeze", likes: 562, date: "2026-05-30", note: "Strong recent visual Elon quote graphic"}
+// Key posts data
+const keyPosts = [
+  {id: "1479806367099719680", author: "@SahilBloom", likes: 6270, date: "2022-01-08", note: "Foundational thread — explicitly calls it a powerful framework"},
+  {id: "1786786124528271694", author: "@cajunkoi", likes: 1596, views: 715322, date: "2024-05-04", note: "Highest reach thread to date — 'The most powerful thinking framework'"},
+  {id: "1955759730460114977", author: "@Founder_Mode_", likes: 432, date: "2025-08-13", note: "Clean 3-step visual frameworks with Aristotle quote"},
+  {id: "2052736963309187399", author: "@jaynitx", likes: 5702, date: "2026-05-08", note: "Recent high-water mark — 'Elon’s 5-step first-principles process'"},
+  {id: "2060582954187817141", author: "@XFreeze", likes: 562, date: "2026-05-30", note: "Strong recent visual performer — Elon quote graphic"}
 ];
 
-function renderPosts(filtered) {
-  const container = document.getElementById('posts-list');
-  container.innerHTML = '';
-  filtered.forEach(p => {
-    const el = document.createElement('div');
-    el.className = 'flex items-center justify-between bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl px-5 py-3 text-sm';
-    el.innerHTML = `
-      <div class="flex-1 min-w-0">
-        <span class="font-medium">${p.author}</span>
-        <span class="text-slate-500 mx-2">·</span>
-        <span class="text-slate-400">${p.date}</span>
-        <div class="text-slate-300 mt-0.5">${p.note}</div>
-      </div>
-      <div class="flex items-center gap-x-4 text-right">
-        <div><span class="font-semibold">${p.likes.toLocaleString()}</span> <span class="text-xs text-slate-500">likes</span></div>
-        <a href="https://x.com/i/web/status/${p.id}" target="_blank" class="text-cyan-400 hover:text-cyan-300"><i class="fa-solid fa-external-link-alt"></i></a>
-      </div>
+function renderKeyPosts(filteredPosts) {
+  const tbody = document.getElementById('posts-tbody');
+  tbody.innerHTML = '';
+
+  filteredPosts.forEach(post => {
+    const row = document.createElement('tr');
+    row.className = 'post-row border-b border-slate-800 last:border-0';
+    row.innerHTML = `
+      <td class="px-5 py-4">
+        <div class="font-medium">${post.author}</div>
+        <div class="text-xs text-slate-400 mt-0.5">${post.note}</div>
+      </td>
+      <td class="px-5 py-4 text-right">
+        <div class="font-semibold tabular-nums">${post.likes.toLocaleString()}</div>
+        <div class="text-[10px] text-slate-500">likes</div>
+        ${post.views ? `<div class="text-[10px] text-slate-500">${(post.views/1000).toFixed(0)}k views</div>` : ''}
+      </td>
+      <td class="px-5 py-4">
+        <a href="https://x.com/i/web/status/${post.id}" target="_blank" 
+           class="text-cyan-400 hover:text-white text-lg">
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      </td>
     `;
-    container.appendChild(el);
+    tbody.appendChild(row);
   });
 }
 
-function filterPosts() {
-  const q = document.getElementById('post-search').value.toLowerCase();
-  const filtered = posts.filter(p => 
-    p.author.toLowerCase().includes(q) || 
-    p.note.toLowerCase().includes(q)
+function filterKeyPosts() {
+  const query = document.getElementById('post-search').value.toLowerCase().trim();
+  const filtered = keyPosts.filter(p => 
+    p.author.toLowerCase().includes(query) || 
+    p.note.toLowerCase().includes(query)
   );
-  renderPosts(filtered);
+  renderKeyPosts(filtered);
 }
 
-function showTab(tab) {
-  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-  document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
-  document.getElementById('content-' + tab).classList.remove('hidden');
-  document.getElementById('tab-' + tab).classList.add('active');
-  if (tab === 'posts' && document.getElementById('posts-list').children.length === 0) {
-    renderPosts(posts);
+function downloadPostsJSON() {
+  const dataStr = JSON.stringify(keyPosts, null, 2);
+  const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+  const link = document.createElement('a');
+  link.setAttribute('href', dataUri);
+  link.setAttribute('download', 'fpf-x-key-posts.json');
+  link.click();
+}
+
+// Initialize
+window.onload = function() {
+  renderKeyPosts(keyPosts);
+  
+  // Make search focus open the posts area if needed
+  const searchInput = document.getElementById('post-search');
+  if (searchInput) {
+    searchInput.addEventListener('focus', () => {
+      const postsSection = document.querySelector('#posts-tbody').closest('.mt-14');
+      if (postsSection) postsSection.scrollIntoView({behavior: 'smooth', block: 'center'});
+    });
   }
-}
 
-// Keyboard support for search
-window.addEventListener('load', () => {
-  const search = document.getElementById('post-search');
-  if (search) search.addEventListener('focus', () => showTab('posts'));
-});
-
-// Default view
-window.onload = () => {
-  showTab('overview');
+  // Keyboard shortcut
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+      e.preventDefault();
+      document.getElementById('post-search').focus();
+    }
+  });
 };
 </script>
 </body>
