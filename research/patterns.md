@@ -14,4 +14,4 @@ Broader queries (full phrase + general GitHub links) occasionally surface additi
 
 **Process**: On every trigger we run the complete set of 5 queries and perform strict manual verification.
 
-Last updated: 2026-06-01
+Last updated: 2026-06-02
