@@ -1,33 +1,31 @@
 # FPF X Research — Master Timeline
 
-**Scope**: Only posts that specifically mention or discuss **FPF** (First Principle Framework) as a spec, framework, or defined methodology.
+**Scope**:
+- Only posts discussing **FPF** (First Principle Framework) as a specific spec or framework
+- **Time window**: From the beginning of 2026 onwards only
 
-General "first principles thinking" content is excluded.
+General "first principles thinking" content is excluded, regardless of date.
 
 ---
 
-## Current Status (as of 2026-05-31)
+## 2026 (Current Research Window)
 
-Public discussion of an **FPF spec** on X is extremely limited.
+Public discussion of an **FPF spec** on X has been very limited so far in 2026.
 
-After targeted searches for terms such as:
+Targeted searches for:
 - "FPF spec"
 - "FPF framework"
 - "First Principle Framework"
 - "FPF specification"
 
-...very few (if any) relevant public posts were found.
+...have returned almost no relevant public posts within 2026.
 
-This suggests that FPF as a named specification is not yet widely discussed publicly on X, or is primarily discussed in private / internal contexts.
+This suggests that as of May 2026, the FPF specification is not yet a widely discussed topic publicly on X.
 
 ---
 
-## Historical Notes (Out of Scope)
+## Pre-2026 (Out of Scope)
 
-Previous versions of this research included many posts about general "first principles thinking". These have been removed per updated scope.
+All research prior to 2026 has been excluded per current scope rules.
 
-Examples of excluded content:
-- Sahil Bloom thread on first principles thinking (2022)
-- Various Elon/SpaceX "first principles" explainers
-
-Last major scope correction: 2026-05-31
+Last updated: 2026-05-31

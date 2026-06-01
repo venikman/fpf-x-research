@@ -1,15 +1,16 @@
 # Observed Patterns — FPF X Research
 
-## Current Main Finding
+**Time Scope**: 2026 onwards only
 
-As of late May 2026, there is **very little to no public discussion** on X specifically about an "FPF spec" or "First Principle Framework" as a defined specification.
+## Main Finding (2026)
 
-Searches for exact and near-exact phrases return almost no relevant results.
+As of late May 2026, there continues to be **very little public discussion** on X about an "FPF spec" or "First Principle Framework" as a defined specification.
+
+Searches limited to 2026 return almost no relevant results.
 
 ## Implications
-
-- FPF may still be primarily an internal / private concept at this stage.
-- The acronym "FPF" does not appear to be in common public use for this idea on X.
-- Opportunity exists to define and promote the spec publicly.
+- FPF appears to still be primarily discussed in private/internal contexts rather than publicly on X.
+- The term "FPF" is not commonly used in public discourse for this concept yet.
+- Opportunity to shape the public narrative around the spec.
 
 Last updated: 2026-05-31
