@@ -2,17 +2,15 @@
 
 **Time Scope**: 2026 onwards only
 
-## Main Finding
+## Key Pattern: GitHub Repo Recommendations
 
-Public use of "FPF" as an acronym for First Principles Framework is extremely rare on X in 2026.
+The main way people are publicly discussing the actual FPF in 2026 is by directly linking to https://github.com/ailev/FPF and recommending it for advanced structured reasoning / agent work.
 
-One notable exception:
-- Feb 2026: @spaceman_gilda used "First Principles Framework (FPF)" in a technical paper on epistemic status and trust aggregation for AI/engineering systems.
+People refer to it as:
+- "First Principles Framework"
+- The "HardCore version" for agents
+- A tool for generating specs (CN-Spec) using concepts like CharacteristicSpace
 
-Beyond this, searches return almost no relevant public discussion of an FPF specification.
+There is almost no abstract discussion of "FPF spec" without referencing the implementation.
 
-## Implications
-- The FPF concept (as a named spec) has not yet gained significant public traction on X.
-- Early adopters defining their own versions (like the above) may exist in niche technical communities.
-
-Last updated: 2026-05-31
+Last updated: 2026-06-01

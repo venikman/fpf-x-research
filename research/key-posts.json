@@ -1,13 +1,24 @@
 {
-  "description": "Posts specifically discussing FPF spec / First Principle Framework (strict scope, 2026+)",
-  "last_updated": "2026-05-31",
+  "description": "Mentions of FPF spec / First Principle Framework (including GitHub repo references), 2026+",
+  "last_updated": "2026-06-01",
   "posts": [
     {
-      "id": "2018661327250801092",
-      "date": "2026-02-03",
-      "author": "@spaceman_gilda",
-      "likes": 0,
-      "notes": "Formalizes 'First Principles Framework (FPF)' for epistemic metadata and conservative trust aggregation. References arXiv paper. One of the rare actual uses of FPF as acronym in 2026."
+      "id": "2027723216517525695",
+      "date": "2026-02-28",
+      "author": "@Valeriy_Pvlvch",
+      "notes": "Recommends https://github.com/ailev/FPF and explicitly calls it 'First Principles Framework by @ailev'"
+    },
+    {
+      "id": "2045152180617748499",
+      "date": "2026-04-17",
+      "author": "@modern_literacy",
+      "notes": "Recommends https://github.com/ailev/FPF as the 'HardCore version' for empowering agents with skills"
+    },
+    {
+      "id": "2050660980661665938",
+      "date": "2026-05-02",
+      "author": "@erthad",
+      "notes": "Recommends loading https://github.com/ailev/FPF to generate CN-Spec using CharacteristicSpace/CHRMechanismSuite. Suggests telling AI to avoid FPF terminology if needed."
     }
   ]
 }

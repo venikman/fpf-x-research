@@ -1,24 +1,24 @@
 # FPF X Research — Master Timeline
 
 **Scope**:
-- Only posts discussing **FPF** (First Principle Framework) as a specific spec or framework
-- **Time window**: From the beginning of 2026 onwards only
+- Posts discussing **FPF** (First Principle Framework) as a specific spec/framework, including direct references to the implementation.
+- Time window: 2026 onwards only.
 
 ---
 
 ## 2026 Findings
 
-Public discussion of an **FPF spec** remains extremely rare.
-
 ### February 2026
-- **@spaceman_gilda** (Sankalp Gilda) and collaborator published work formalizing a "First Principles Framework (FPF)" for epistemic metadata and trust aggregation in engineering/AI systems.
-  - They define primitives like epistemic layers and F–G–R trust tuples.
-  - Paper: https://arxiv.org/abs/2601.21116
-  - This is one of the very few public uses of "FPF" as an acronym for First Principles Framework in 2026.
+- @Valeriy_Pvlvch recommends https://github.com/ailev/FPF, explicitly calling it "First Principles Framework by @ailev".
 
-### Other 2026 Activity
-After extensive searches for "FPF spec", "FPF framework", "First Principle Framework", etc., almost no other relevant public discussion was found in the first five months of 2026.
+### April 2026
+- @modern_literacy (Stanislau Niadbailau) recommends the "HardCore version" of agent skills: https://github.com/ailev/FPF
 
-This reinforces that FPF as a named specification is not widely discussed publicly on X at this time.
+### May 2026
+- @erthad recommends loading https://github.com/ailev/FPF to generate "CN-Spec" using CharacteristicSpace / CHRMechanismSuite. Notes that one may need to tell the AI not to use FPF terminology.
 
-Last updated: 2026-05-31
+These are currently the main public mentions of the actual FPF implementation on X in 2026.
+
+General "first principles thinking" posts remain excluded.
+
+Last updated: 2026-06-01
