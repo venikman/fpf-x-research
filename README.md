@@ -4,13 +4,14 @@ Public research tracking mentions of **FPF spec** (First Principle Framework spe
 
 ## Scope (Strict)
 
-- Only posts discussing **FPF** as a specific spec/framework ("FPF spec", "FPF framework", "First Principle Framework", etc.)
-- **Time window**: Beginning of 2026 onwards only
+- Only posts discussing **FPF** as a specific spec/framework ("FPF spec", "FPF framework", "First Principle Framework", GitHub links to the repo, etc.)
+- **Time window**: Summer 2025 onwards (since 2025-06-01)
 - General "first principles thinking" content is excluded
+- Broad "FPF" searches + GitHub links + full phrase, followed by manual context verification
 
 ## Current Status
 
-As of late May 2026, public discussion of an FPF specification on X remains very limited.
+Public discussion of the actual FPF implementation remains limited but has some signals via direct repo recommendations.
 
 ## Live Site
 
