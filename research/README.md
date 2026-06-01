@@ -1,11 +1,10 @@
-# FPF X Daily Research Data
+## Search Methodology (Updated)
 
-This folder contains the raw research artifacts.
+We use a pragmatic, high-recall + verification approach:
 
-- `timeline.md` — Living master timeline
-- `daily/` — Daily research snapshots
-- `patterns.md` — Observed patterns over time
-- `tracked-accounts.md` — Accounts worth monitoring
-- `key-posts.json` — Notable posts with metadata
+1. Broad search for the acronym "FPF" (since 2026-01-01)
+2. Search for direct GitHub links (e.g. github.com/.../fpf, ailev/FPF)
+3. Search for the full phrase "First principles framework"
+4. Manually review context of each result to confirm it is about the actual FPF spec / implementation (not football, trading FVG, random acronyms, etc.)
 
-These files are the source of truth and are updated automatically.
+This catches real discussions even when people don't use the perfect keywords.
